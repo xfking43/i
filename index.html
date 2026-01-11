@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Loading</title>
+
+<style>
+body{
+  margin:0;
+  height:100vh;
+  background:#0b0b0b;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.loader{
+  width:140px;
+  height:4px;
+  background:#222;
+  overflow:hidden;
+  border-radius:4px;
+}
+.loader::before{
+  content:"";
+  display:block;
+  width:40%;
+  height:100%;
+  background:#2ea6ff;
+  animation:load 0.5s linear infinite;
+}
+@keyframes load{
+  from{transform:translateX(-100%)}
+  to{transform:translateX(300%)}
+}
+</style>
+</head>
+<body>
+  <div class="loader"></div>
+  <script src="app.js"></script>
+</body>
+</html>
